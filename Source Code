@@ -1,0 +1,28 @@
+#Guessing game 
+import random as rd
+list=[1,2,3,4,5,6,7,8,9,10]
+a=rd.choice(list)
+#Introduction
+print("**********Welcome to the Guessing Game**********")
+print("I have chosen a random number from 1 to 10")
+print("You have to guess the number")
+i=1
+while i>0:
+    b=input("Enter your guess ")
+    guess=int(b)
+    diff=a-guess
+    if diff<0:
+        diff=diff*-1
+    if a==guess:
+        print("Bravo! Your guess is Correct")
+        break
+    else: 
+        if diff==1:
+            print("Hottest")
+        elif diff==2:
+            print("Hot")
+        elif diff>2 & diff<5:
+            print("Cold")
+        elif diff>5:
+            print("Very Cold")
+        i=i+1
